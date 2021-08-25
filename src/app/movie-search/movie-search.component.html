@@ -1,0 +1,31 @@
+
+<div class="row">
+    <div class="col-12">
+        <h1 class="text-center mt-3 mb-5">Cinema</h1>
+            <div class="input-group input-group-lg">
+                <!-- <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">Cerca un film...</span>               
+                </div>                -->
+                <input 
+                    placeholder="Cerca un film"
+                    id="query"
+                    type="text"
+                    class="form-control" 
+                    aria-label="Large" 
+                    aria-describedby="inputGroup-sizing-sm"
+                    [(ngModel)]="query"
+                    (keyup.enter)="getMovieSearchResult()"
+                >
+            </div>  
+            <div class="row">
+                
+                <app-movie-tab
+                  *ngFor="let movie of movies | async"
+                  [movie]="movie"
+                  class="col-4 mb-3"
+                ></app-movie-tab> 
+            
+            </div>
+     </div>   
+</div>
+

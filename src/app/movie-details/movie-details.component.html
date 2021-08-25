@@ -1,0 +1,38 @@
+<div class="container" *ngIf="movieDetails | async as movie ">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center mt-3 mb-5">{{ movie.Title}} {{movie.Year}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <img class="img-responsive rounded"
+                [src]="movie.Poster">
+        </div>
+        <div class="col-8">
+            <p>
+                {{ movie.Plot }}
+            </p>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th scope="row">Writer</th>
+                        <td>{{ movie.Writer }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Language</th>
+                        <td>{{ movie.Language }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Genre</th>
+                        <td>{{ movie.Genre }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card-body">
+                <button routerLink="/" class="btn btn-primary">Torna Indietro</button>
+            </div>
+        </div>
+    </div>
+</div>
+

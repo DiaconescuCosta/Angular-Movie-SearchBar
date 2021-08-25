@@ -1,0 +1,23 @@
+<div class="card">
+     <img class="card-img-top crop" [src]="movie.Poster" [alt]="movie.Title">
+     <div class="card-body">
+       <h6 class="card-title">{{ movie.Title }}</h6>                     
+     </div>
+     <ul class="list-group list-group-flush">
+         <li class="list-group-item"><strong>Year: </strong>{{ movie.Year }}</li>
+         <li class="list-group-item"><strong>Type: </strong>{{ movie.Type }}</li>
+     </ul>
+     <div class="card-body">
+         <a 
+           routerLink="/movie-details"
+           [queryParams]="{ movieId: movie.imdbID }"
+           class="btn btn-primary">
+           Dettagli
+         </a>
+     </div>
+ </div>
+
+
+
+
+
