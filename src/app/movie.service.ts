@@ -13,7 +13,6 @@ export class MovieService {
   private readonly urlShort = `https://omdbapi.com/?apikey=`;
   private readonly APIKEY = `58a7c679`;
 
-  private url = `https://omdbapi.com/?apikey=157f9eb7&s=`
 
 
   constructor(
