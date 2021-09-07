@@ -2,10 +2,8 @@
 <div class="row">
     <div class="col-12">
         <h1 class="text-center mt-3 mb-5">Cinema</h1>
-            <div class="input-group input-group-lg">
-                <!-- <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-lg">Cerca un film...</span>               
-                </div>                -->
+            <!-- For reference, old method-->
+            <!-- <div class="input-group input-group-lg">
                 <input 
                     placeholder="Cerca un film"
                     id="query"
@@ -16,7 +14,18 @@
                     [(ngModel)]="query"
                     (keyup.enter)="getMovieSearchResult()"
                 >
-            </div>  
+            </div>   -->
+                <form [formGroup]="inputForm" (ngSubmit)="onSubmit()" class="input-group input-group-lg">
+                  <input 
+                      [placeholder]="'Cerca un film'"
+                      id="form.c"
+                      type="text"  
+                      class="form-control"
+                      aria-label="Large"
+                      aria-describedby="inputGroup-sizing-sm"
+                      formControlName="input"
+                    >
+                 </form>
             <div class="row">
                 
                 <app-movie-tab

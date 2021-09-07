@@ -8,12 +8,18 @@
          <li class="list-group-item"><strong>Type: </strong>{{ movie.Type }}</li>
      </ul>
      <div class="card-body">
+          <!-- Old method, passing the id through query params
+          <a 
+          routerLink="/movie-details"
+          [queryParams]="{ movieId: movie.imdbID }"
+          class="btn btn-primary">
+          Dettagli
+          </a> -->
          <a 
-           routerLink="/movie-details"
-           [queryParams]="{ movieId: movie.imdbID }"
+           routerLink="/movie-details/{{ movie.imdbID }}"
            class="btn btn-primary">
            Dettagli
-         </a>
+        </a>
      </div>
  </div>
 

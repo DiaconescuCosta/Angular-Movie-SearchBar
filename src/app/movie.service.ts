@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Movie, MovieDetails } from './movie.module';
+import { Movie } from './movie.interface';
+
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,8 @@ export class MovieService {
       );
   }
   
-  getDetails(imdbId: string): Observable<any> {
+  getDetails(imdbId: string | null): Observable<any> {
     return this.http.get(`${this.urlShort + this.APIKEY}&i=${imdbId}&plot=short`);
+    
   }
 }

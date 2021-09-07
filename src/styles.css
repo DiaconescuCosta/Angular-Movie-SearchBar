@@ -14,3 +14,12 @@ img.crop {
 .input-group {
     height: auto;
   }
+
+  
+
+  /* input.ng-invalid.ng-touched 
+    border: 1px solid red;
+    width: 100%;
+    padding: .5rem;
+    /* box-sizing: border-box; */
+

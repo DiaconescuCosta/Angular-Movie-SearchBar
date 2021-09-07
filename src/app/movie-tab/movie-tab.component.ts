@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Movie } from '../movie.module';
+import { Movie } from '../movie.interface';
 
 @Component({
   selector: 'app-movie-tab',
