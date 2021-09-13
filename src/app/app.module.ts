@@ -26,7 +26,7 @@ import { BaseInterceptor } from './base.interceptor';
     ReactiveFormsModule
   ],
   providers: [MovieService,
-    // {provide: HTTP_INTERCEPTORS,useClass: BaseInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: BaseInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })

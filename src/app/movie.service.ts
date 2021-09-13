@@ -11,24 +11,19 @@ import { Movie } from './movie.interface';
 })
 export class MovieService {
 
-  private readonly urlShort = `https://omdbapi.com/?apikey=`;
-  private readonly APIKEY = `58a7c679`;
-
-
-
   constructor(
     private http: HttpClient
   ) { }
 
   searchMovie(searchQuery: string): Observable<Array<Movie>> {
-    return this.http.get(`${this.urlShort + this.APIKEY}&s=${searchQuery}`)
+    return this.http.get(`&s=${searchQuery}`)
       .pipe(
         map((response: any) => response.Search)
       );
   }
   
   getDetails(imdbId: string | null): Observable<any> {
-    return this.http.get(`${this.urlShort + this.APIKEY}&i=${imdbId}&plot=short`);
+    return this.http.get(`&i=${imdbId}&plot=short`);
     
   }
 }

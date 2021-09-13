@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Movie } from '../movie.interface';
 import { MovieService } from '../movie.service';
@@ -17,13 +17,20 @@ export class MovieSearchComponent implements OnInit {
   inputForm!: FormGroup;
 
   constructor(
-    private movieService: MovieService
+    private movieService: MovieService,
+    private fb: FormBuilder
   ) {}
 
   ngOnInit() {
-    this.inputForm = new FormGroup({
-      'input': new FormControl(null)
-    });
+    // Old method with FormGroup:
+    // this.inputForm = new FormGroup({
+    //   'input': new FormControl(null)
+    // });
+
+    // New method with FormBuilder:
+    this.inputForm = this.fb.group({
+      input: [''] 
+    })
   }
 
 
