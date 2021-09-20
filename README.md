@@ -1,3 +1,10 @@
+# Search Movie Bar in Angular
+
+<img width="1357" alt="Screenshot 2021-09-20 at 11 53 03" src="https://user-images.githubusercontent.com/46909774/133984209-faf0ba82-6261-402e-aa55-9bddb6c3ec51.png">
+<img width="1357" alt="Screenshot 2021-09-20 at 11 53 10" src="https://user-images.githubusercontent.com/46909774/133984230-265c4e49-a74d-4bd1-a25c-70c376e6e6e5.png">
+
+
+
 # Cinema
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
